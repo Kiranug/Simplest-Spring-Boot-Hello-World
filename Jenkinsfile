@@ -32,9 +32,9 @@ pipeline {
                 echo 'Docker image Building..'
                 sh """
                 gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://gcr.io
-                docker build -t ${env.EXPRESS_IMAGENAME} .
-                docker tag ${env.EXPRESS_IMAGENAME} ${env.GCR_REPO}/${env.EXPRESS_IMAGENAME}:${currentBuild.number}
-                docker push ${env.GCR_REPO}/${env.EXPRESS_IMAGENAME}:${currentBuild.number}
+                docker build -t ${env.EXPRESS_IMAGE_NAME} .
+                docker tag ${env.EXPRESS_IMAGE_NAME} ${env.GCR_REPO}/${env.EXPRESS_IMAGE_NAME}:${currentBuild.number}
+                docker push ${env.GCR_REPO}/${env.EXPRESS_IMAGE_NAME}:${currentBuild.number}
                 """
                 
             }
