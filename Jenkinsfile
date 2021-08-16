@@ -1,5 +1,5 @@
 import groovy.json.JsonSlurperClassic
-def projects = readJSON file: "${env.WORKSPACE}\\Projects.json".           
+//def projects = readJSON file: "${env.WORKSPACE}\\Projects.json".           
 
 pipeline {
     agent any
