@@ -1,3 +1,6 @@
+import groovy.json.JsonSlurperClassic
+def projects = readJSON file: "${env.WORKSPACE}\\Projects.json".           
+
 pipeline {
     agent any
     stages {
@@ -9,9 +12,6 @@ pipeline {
          stage('Build') {
             steps {
                 echo 'Building..'
-                 script {
-                    def projects = readJSON file: "${env.WORKSPACE}\\Projects.json".              
-                    }
                    echo projects.projects.project[1].name
                    sh 'mvn clean package'
             }
