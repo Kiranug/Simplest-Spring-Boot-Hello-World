@@ -6,8 +6,9 @@ pipeline {
     stages {
         stage('SCM checkout') {
             steps {
-               credentialsId: 'gitaccess',
+               withCredentials([gitUsernamePassword(credentialsId: 'gitaccess', gitToolName: 'Default')]) {
                git "${env.GITREPO}"
+                }
           }
         }
          stage('Build') {
