@@ -12,7 +12,7 @@ pipeline {
          stage('Build') {
             steps {
                 echo 'Building..'
-                      load "$JENKINS_HOME/.envvars/name-dev.groovy"
+                      load "$WORKSPACE/.envvars/name-dev.groovy"
                       echo "${env.DB_URL}"
                       echo "${env.DB_URL2}"
                       sh 'mvn clean package'
