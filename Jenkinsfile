@@ -1,5 +1,5 @@
 import groovy.json.JsonSlurperClassic
-def projects = readJSON file: "${env.WORKSPACE}\\Projects.json".           
+//def projects = readJSON file: "${env.WORKSPACE}\\Projects.json".           
 
 pipeline {
     agent any
@@ -12,8 +12,10 @@ pipeline {
          stage('Build') {
             steps {
                 echo 'Building..'
-                   echo projects.projects.project[1].name
-                   sh 'mvn clean package'
+                      load "$JENKINS_HOME/.envvars/name-dev.groovy"
+                      echo "${env.DB_URL}"
+                      echo "${env.DB_URL2}"
+                      sh 'mvn clean package'
             }
              post {
                  success {
