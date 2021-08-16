@@ -7,7 +7,7 @@ pipeline {
         stage('SCM checkout') {
             steps {
                withCredentials([gitUsernamePassword(credentialsId: 'gitaccess', gitToolName: 'Default')]) {
-               git "${env.GITREPO}"
+               git 'https://github.com/Kiranug/Simplest-Spring-Boot-Hello-World.git'
                 }
           }
         }
