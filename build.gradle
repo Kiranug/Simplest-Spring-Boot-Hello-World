@@ -1,0 +1,18 @@
+plugins {
+  id "maven-publish"
+  id "com.google.cloud.artifactregistry.gradle-plugin" version "2.1.1"
+}
+
+publishing {
+  repositories {
+    maven {
+      url "artifactregistry://us-central1-maven.pkg.dev/neural-mantra-303016/maven-artifact"
+    }
+  }
+}
+
+repositories {
+  maven {
+    url "artifactregistry://us-central1-maven.pkg.dev/neural-mantra-303016/maven-artifact"
+  }
+}
