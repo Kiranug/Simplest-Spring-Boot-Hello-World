@@ -9,7 +9,11 @@ pipeline {
          stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'mvn clean package'
+                 script {
+                    def projects = readJSON file: "${env.WORKSPACE}\\Projects.json".              
+                    }
+                   echo projects.projects.project[1].name
+                   sh 'mvn clean package'
             }
              post {
                  success {
@@ -18,7 +22,7 @@ pipeline {
                  }
              }
         }
-        
+            
           stage('Docker Build') {
             steps {
                 echo 'Docker image Building..'
