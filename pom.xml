@@ -44,9 +44,6 @@
 		</dependency> -->
 
 	</dependencies>
-</project>
-
-<project>
   <distributionManagement>
     <snapshotRepository>
       <id>artifact-registry</id>
@@ -81,3 +78,5 @@
     </extensions>
   </build>
 </project>
+
+
