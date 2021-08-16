@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('SCM checkout') {
             steps {
+               credentialsId: 'gitaccess',
                git "${env.GITREPO}"
           }
         }
