@@ -17,7 +17,7 @@ pipeline {
                       load "$WORKSPACE/.envvars/name-dev.groovy"
                       echo "${env.DB_URL}"
                       echo "${env.DB_URL2}"
-                      sh 'mvn clean package'
+                      sh 'mvn clean package deploy'
             }
              post {
                  success {
