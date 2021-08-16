@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('SCM checkout') {
             steps {
-               git ${env.GITREPO}
+               git "${env.GITREPO}"
           }
         }
          stage('Build') {
