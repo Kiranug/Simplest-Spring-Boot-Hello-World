@@ -1,0 +1,17 @@
+{
+    "dev":{
+        "#PROJECT_ID#":"neural-mantra-303016"
+        "#NAMESPACE#":"default"
+        "#build_credentails_id#":"terraformaccessid@neural-mantra-303016.iam.gserviceaccount.com"
+        "#cluster_name#":"cluster-1"
+        "#cluster_region#":"us-central1"
+    },
+
+
+    "qa ":{
+        "#PROJECT_ID#":"neural-mantra-303016"
+        "#NAMESPACE#":"default"
+        "#build_credentails_id#":"terraformaccessid@neural-mantra-303016.iam.gserviceaccount.com"
+        "#cluster_name#":"cluster-1"
+        "#cluster_region#":"us-central1"
+}
