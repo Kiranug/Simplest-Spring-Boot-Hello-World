@@ -1,9 +1,15 @@
 {
     "dev":{
-        "#PROJECT_ID#":"neural-mantra-303016"
-        "#NAMESPACE#":"default"
-        "#build_credentails_id#":"terraformaccessid@neural-mantra-303016.iam.gserviceaccount.com"
-        "#cluster_name#":"cluster-1"
+        "#PROJECT_ID#":"neural-mantra-303016",
+        "#NAMESPACE#":"default",
+        "#NAMESPACE_Integration#":"default",
+        "#SPRING_PROFILE#":"dev",
+        "#CLOUD_MEMORYSTORE_IP#":"0.0.0.0",
+        "#REPLICA_COUNT#":"1",
+        "#APP_REGION#":"us-central",
+        "#build_credentails_id#":"terraformaccessid@neural-mantra-303016.iam.gserviceaccount.com",
+        "#deployment_credentails_id#":"terraformaccessid@neural-mantra-303016.iam.gserviceaccount.com",
+        "#cluster_name#":"cluster-1",
         "#cluster_region#":"us-central1"
     },
 
